@@ -25,7 +25,7 @@
                         <a href="#!" class="logo logo-admin"><img src="{{ asset('stexo/images/logo-dark.png') }}" alt="" height="24"></a>
                     </div>
                     <h5 class="font-18 text-center">Sign in to continue to Master.</h5>
-                    <form class="form-horizontal m-t-30" method="POST" action="{{ route('login') }}">
+                    <form class="login form-horizontal m-t-30" method="POST" action="{{ route('login') }}" data-type="json">
                         @csrf
                         <div class="form-group">
                             <div class="col-12">
@@ -37,7 +37,7 @@
                         <div class="form-group">
                             <div class="col-12">
                                 <label>Password</label>
-                                <input class="form-control" name="password" type="password" required="" placeholder="Password">
+                                <input class="form-control" name="password" type="password"  placeholder="Password">
                             </div>
                         </div>
 
@@ -45,8 +45,8 @@
                             <div class="col-12">
                                 <div class="checkbox checkbox-primary">
                                     <div class="custom-control custom-checkbox">
-                                      <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                      <label class="custom-control-label" for="customCheck1"> Remember me</label>
+                                      <input type="checkbox" class="custom-control-input" name="remember" id="remember">
+                                      <label class="custom-control-label" for="customCheck1"> {{ __('Remember Me') }}</label>
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
 
                         <div class="form-group text-center m-t-20">
                             <div class="col-12">
-                                <button class="btn btn-primary btn-block btn-lg waves-effect waves-light" type="submit">Log In</button>
+                                <button class="btn btn-primary btn-block btn-lg waves-effect waves-light" type="submit">{{ __('Login') }}</button>
                             </div>
                         </div>
                     </form>
@@ -64,14 +64,13 @@
         <!-- END wrapper -->
 
         <!-- jQuery  -->
-        <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-        <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('assets/js/metismenu.min.js') }}"></script>
-        <script src="{{ asset('assets/js/jquery.slimscroll.js') }}"></script>
-        <script src="{{ asset('assets/js/waves.min.js') }}"></script>
+        <script src="{{ asset('stexo/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('stexo/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('stexo/js/metismenu.min.js') }}"></script>
+        <script src="{{ asset('stexo/js/jquery.slimscroll.js') }}"></script>
+        <script src="{{ asset('stexo/js/waves.min.js') }}"></script>
 
-        <script src="{{ asset('assets/js/app.js') }}"></script>
-
+        <script src="{{ asset('stexo/js/app.js') }}"></script>
+        <script src="{{ asset('stexo/js/login.js') }}"></script>
     </body>
-
 </html>
